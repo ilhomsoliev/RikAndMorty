@@ -57,12 +57,14 @@ class DetailedCharacterViewModel @Inject constructor(
                                 )
                             )
                             // Get Episodes
-                            val request = response.data.episode.take(5).joinToString(
-                                separator = ",",
-                                prefix = "[",
-                                postfix = "]"
-                            ) { getCharactersAfterLastSlash(it) }
-                            getEpisodes(request)
+                            if(response.data.episode.isNotEmpty()) {
+                                val request = response.data.episode.take(5).joinToString(
+                                    separator = ",",
+                                    prefix = "[",
+                                    postfix = "]"
+                                ) { getCharactersAfterLastSlash(it) }
+                                getEpisodes(request)
+                            }
                         }
 
                         is Response.Loading -> {

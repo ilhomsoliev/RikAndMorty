@@ -56,7 +56,7 @@ class DetailedLocationViewModel @Inject constructor(
                                     isLoading = false
                                 )
                             )
-                            // Get Episodes
+                            // Get residents
                             if(response.data.residents.isNotEmpty()) {
                                 val request = response.data.residents.take(5).joinToString(
                                     separator = ",",
