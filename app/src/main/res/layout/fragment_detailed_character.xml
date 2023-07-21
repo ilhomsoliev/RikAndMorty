@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".feature.chracters.presentation.detailed.DetailedCharacterFragment">
+
+        <ProgressBar
+            android:id="@+id/detailedCharacterProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detailedCharacterBody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/detailedCharacterAvatarImageView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/detailedCharacterNameLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Name: "
+                app:layout_constraintStart_toStartOf="@+id/detailedCharacterAvatarImageView"
+                app:layout_constraintTop_toBottomOf="@+id/detailedCharacterAvatarImageView" />
+
+            <TextView
+                android:id="@+id/detailedCharacterNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/detailedCharacterNameLabelTextView"
+                app:layout_constraintStart_toEndOf="@+id/detailedCharacterNameLabelTextView"
+                app:layout_constraintTop_toTopOf="@+id/detailedCharacterNameLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedCharacterGenderLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Gender"
+                app:layout_constraintStart_toStartOf="@+id/detailedCharacterNameLabelTextView"
+                app:layout_constraintTop_toBottomOf="@+id/detailedCharacterNameLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedCharacterGenderTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/detailedCharacterGenderLabelTextView"
+                app:layout_constraintStart_toEndOf="@+id/detailedCharacterGenderLabelTextView"
+                app:layout_constraintTop_toTopOf="@+id/detailedCharacterGenderLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedCharacterSpeciesLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Species"
+                app:layout_constraintStart_toStartOf="@+id/detailedCharacterGenderLabelTextView"
+                app:layout_constraintTop_toBottomOf="@+id/detailedCharacterGenderLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedCharacterSpeciesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/detailedCharacterSpeciesLabelTextView"
+                app:layout_constraintStart_toEndOf="@+id/detailedCharacterSpeciesLabelTextView"
+                app:layout_constraintTop_toTopOf="@+id/detailedCharacterSpeciesLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedCharacterLocationLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Location"
+                app:layout_constraintStart_toStartOf="@+id/detailedCharacterSpeciesLabelTextView"
+                app:layout_constraintTop_toBottomOf="@+id/detailedCharacterSpeciesLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedCharacterLocationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/detailedCharacterLocationLabelTextView"
+                app:layout_constraintStart_toEndOf="@+id/detailedCharacterLocationLabelTextView"
+                app:layout_constraintTop_toTopOf="@+id/detailedCharacterLocationLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedCharacterEpisodesLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Episodes"
+                app:layout_constraintStart_toStartOf="@+id/detailedCharacterLocationLabelTextView"
+                app:layout_constraintTop_toBottomOf="@+id/detailedCharacterLocationLabelTextView" />
+
+            <ProgressBar
+                android:id="@+id/detailedCharacterEpisodesProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailedCharacterEpisodesLabelTextView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detailedCharacterLocationRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailedCharacterEpisodesLabelTextView" />
+
+            <ImageView
+                android:id="@+id/detailedCharacterArrowBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</ScrollView>

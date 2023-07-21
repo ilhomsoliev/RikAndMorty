@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/viewPagerFragment">
+
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.ilhomsoliev.rikandmortytest.feature.viewpager.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_detailedCharacterFragment"
+            app:destination="@id/detailedCharacterFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_detailedLocationFragment"
+            app:destination="@id/detailedLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedCharacterFragment"
+        android:name="com.ilhomsoliev.rikandmortytest.feature.chracters.presentation.detailed.DetailedCharacterFragment"
+        android:label="fragment_detailed_character"
+        tools:layout="@layout/fragment_detailed_character" >
+        <argument
+            android:name="character_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedLocationFragment"
+        android:name="com.ilhomsoliev.rikandmortytest.feature.locations.presentation.detailed.DetailedLocationFragment"
+        android:label="fragment_detailed_location"
+        tools:layout="@layout/fragment_detailed_location" >
+        <argument
+            android:name="location_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_detailedLocationFragment_to_detailedCharacterFragment"
+            app:destination="@id/detailedCharacterFragment" />
+    </fragment>
+</navigation>

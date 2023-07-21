@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/detailedLocationProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detailedLocationBody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/detailedLocationNameLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Name: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailedLocationArrowBack" />
+
+            <TextView
+                android:id="@+id/detailedLocationNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/detailedLocationNameLabelTextView"
+                app:layout_constraintStart_toEndOf="@+id/detailedLocationNameLabelTextView"
+                app:layout_constraintTop_toTopOf="@+id/detailedLocationNameLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedLocationTypeLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Type"
+                app:layout_constraintStart_toStartOf="@+id/detailedLocationNameLabelTextView"
+                app:layout_constraintTop_toBottomOf="@+id/detailedLocationNameLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedLocationTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/detailedLocationTypeLabelTextView"
+                app:layout_constraintStart_toEndOf="@+id/detailedLocationTypeLabelTextView"
+                app:layout_constraintTop_toTopOf="@+id/detailedLocationTypeLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedLocationDimensionLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Dimension"
+                app:layout_constraintStart_toStartOf="@+id/detailedLocationTypeLabelTextView"
+                app:layout_constraintTop_toBottomOf="@+id/detailedLocationTypeLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedLocationDimensionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/detailedLocationDimensionLabelTextView"
+                app:layout_constraintStart_toEndOf="@+id/detailedLocationDimensionLabelTextView"
+                app:layout_constraintTop_toTopOf="@+id/detailedLocationDimensionLabelTextView" />
+
+            <TextView
+                android:id="@+id/detailedLocationEpisodesLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Residents"
+                app:layout_constraintStart_toStartOf="@+id/detailedLocationDimensionLabelTextView"
+                app:layout_constraintTop_toBottomOf="@+id/detailedLocationDimensionLabelTextView" />
+
+            <ProgressBar
+                android:id="@+id/detailedLocationCharacterProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailedLocationEpisodesLabelTextView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detailedLocationCharactersRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailedLocationEpisodesLabelTextView" />
+
+            <ImageView
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:id="@+id/detailedLocationArrowBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</ScrollView>
