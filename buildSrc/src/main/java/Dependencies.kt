@@ -15,10 +15,7 @@ fun DependencyHandlerScope.androidBase() {
         "androidx.navigation:navigation-fragment-ktx:2.6.0",
         "androidx.navigation:navigation-ui-ktx:2.6.0",
     )
-    //  koin()
     hilt()
-    paging()
-    yandexmap()
 }
 
 private fun DependencyHandlerScope.yandexmap() = implementation(
@@ -104,7 +101,7 @@ fun DependencyHandlerScope.hilt() = implementation(
 )
 
 fun DependencyHandlerScope.dataBase() =
-    retrofit() and dataStore()
+    retrofit()  and dataStore()
 
 fun DependencyHandlerScope.realm() = implementation(
     "io.realm.kotlin:library-base:1.5.0"

@@ -27,11 +27,10 @@ android {
 }
 
 dependencies {
-   // coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
 
     androidBase()
 
-    dataBase()
+    retrofit()
 
     kapt("com.google.dagger:hilt-android-compiler:2.46.1")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
